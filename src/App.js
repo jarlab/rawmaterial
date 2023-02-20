@@ -152,8 +152,7 @@ function App() {
                           <TableCell component="th" scope="row">
                             {part}
                           </TableCell>
-                          {console.log("Im here", (Number(Products[product][part].split(" ")[0]) / denominator) * productParts, productParts)}
-                          <TableCell align="right">{Math.floor((Number(Products[product][part].split(" ")[0]) / denominator) * productParts)}</TableCell>
+                          <TableCell align="right">{((Number(Products[product][part].split(" ")[0]) / denominator) * productParts).toFixed(1)}</TableCell>
                         </TableRow>
                       );
                     })
